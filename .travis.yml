@@ -30,6 +30,8 @@ install:
   - wget https://releases.hashicorp.com/terraform/${TERRAFORM}/terraform_${TERRAFORM}_linux_amd64.zip
   - unzip terraform_${TERRAFORM}_linux_amd64.zip
   - sudo mv terraform /usr/local/bin/
+
+script:
   - terraform --version
 
 before_deploy:
