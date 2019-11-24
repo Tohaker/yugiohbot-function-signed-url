@@ -32,14 +32,14 @@ install:
   - sudo mv terraform /usr/local/bin/
   - terraform --version
 
-#before_deploy:
-#  - mkdir -p deployment/function/
-#  - cp -a yugiohbot/. deployment/function/
-#  - chmod +x ./deployment/deploy.sh
-#
-#deploy:
-#  - provider: script
-#    script: bash deployment/deploy.sh
-#    skip_cleanup: true
-#    on:
-#      branch: master
+before_deploy:
+  - mkdir -p deployment/function/
+  - cp -a yugiohbot/. deployment/function/
+  - chmod +x ./deployment/deploy.sh
+
+deploy:
+  - provider: script
+    script: bash deployment/deploy.sh
+    skip_cleanup: true
+    on:
+      branch: master
