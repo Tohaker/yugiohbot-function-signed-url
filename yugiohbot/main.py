@@ -23,4 +23,4 @@ def function(request):
                                    version='v4',
                                    content_type=request_json['contentType'])
 
-    return url
+    return {'signed_url': url}
