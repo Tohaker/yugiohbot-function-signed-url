@@ -23,4 +23,9 @@ def function(request):
                                    version='v4',
                                    content_type=request_json['contentType'])
 
-    return {'signed_url': url}
+    # Set CORS headers for the main request
+    headers = {
+        'Access-Control-Allow-Origin': '*'
+    }
+
+    return {'signed_url': url}, 200, headers
