@@ -10,7 +10,7 @@ def function(request):
 
     request_json = request.get_json()
 
-    storage_client = storage.Client()
+    storage_client = storage.Client.from_service_account_json('signed-url.json')
 
     # Get a reference to the destination file in GCS
     bucket_name = request_json['bucket']
