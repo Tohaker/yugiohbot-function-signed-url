@@ -34,7 +34,8 @@ def function(request):
     expires_at_ms = datetime.now() + timedelta(seconds=30)
     url = file.generate_signed_url(expires_at_ms,
                                    version='v4',
-                                   content_type=request_json['contentType'])
+                                   content_type=request_json['contentType'],
+                                   method="RESUMABLE")
 
     # Set CORS headers for the main request
     headers = {
