@@ -1,5 +1,5 @@
 # YuGiOhBot: Signed URL Function
-Build status: ![](https://travis-ci.org/Tohaker/yugiohbot-function-signed-url.svg?branch=master)
+Build status: ![](https://travis-ci.org/YuGiOhBot3000/yugiohbot-function-signed-url.svg?branch=master)
 
 This project sets up the Signed URL cloud function for the YuGiOhBot Submission Site.
 
