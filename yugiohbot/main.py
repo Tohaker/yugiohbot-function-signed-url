@@ -38,7 +38,8 @@ def function(request):
 
     # Set CORS headers for the main request
     headers = {
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': ['Content-Type', 'x-goog-resumable']
     }
 
     return {'signed_url': url}, 200, headers
